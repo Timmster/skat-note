@@ -8,11 +8,8 @@
     <th>{{ spiel.name }}</th>
     <td *ngFor="let spieler of spieler">
       <div class="punkte">
-        <div
-          *ngFor="let e of spiel.ergebnisse"
-          (click)="setErgebnis(spieler, spiel, e.points)"
-        >
-          <div>
+        <div *ngFor="let e of spiel.ergebnisse">
+          <div (click)="setErgebnis(spieler, spiel, e.points)">
             <mark
               [class]="'selected-' + spieler"
               *ngIf="e.points >= 0 && isErgebnis(spieler, spiel, e.points)"
