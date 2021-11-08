@@ -3,6 +3,7 @@ table {
   border-collapse: collapse;
   width: 100%;
   table-layout: fixed;
+  font-size: 3rem;
 }
 
 table td,
@@ -40,8 +41,8 @@ table th {
 
 .punkte div {
   vertical-align: middle;
-  height: 2rem;
-  width: 2rem;
+  height: 5rem;
+  width: 3rem;
   flex-grow: 1;
   display: flex;
   justify-content: center;
