@@ -1,16 +1,14 @@
 <table>
   <tr>
     <td>Spiel</td>
-    <th colspan="4" *ngFor="let s of spieler">{{ s }}</th>
+    <th colspan="4" *ngFor="let spieler of spieler">{{ s }}</th>
   </tr>
-  <tr *ngFor="let s of spiele">
+  <tr *ngFor="let spiel of spiele">
     <th>{{ s.name }}</th>
-    <td>
-      <select>
-        <option *ngFor="let e of s.ergebnisse">{{ e.name }}</option>
-      </select>
+    <td *ngFor="let spieler of spieler">
+      <div *ngFor="let e of spiel.ergebnisse">
+        <span *ngIf="e.points >= 0">{{ e.points }}</span>
+      </div>
     </td>
-    <td></td>
-    <td></td>
   </tr>
 </table>

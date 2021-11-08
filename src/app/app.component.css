@@ -6,8 +6,9 @@ table {
 
 table td,
 table th {
-  border: 1px solid #ddd;
-  padding: 8px;
+  border: 2px solid #bbb;
+  padding: 12px;
+  text-align: center;
 }
 
 table tr:nth-child(even) {
@@ -19,9 +20,9 @@ table tr:hover {
 }
 
 table th {
+  text-align: center;
   padding-top: 12px;
   padding-bottom: 12px;
-  text-align: left;
   background-color: #04aa6d;
   color: white;
 }

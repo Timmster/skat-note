@@ -1,5 +1,5 @@
 import { Component, VERSION } from '@angular/core';
-import { SPIELE } from './skatspiel';
+import { SkatSpiel, SPIELE } from './skatspiel';
 
 @Component({
   selector: 'my-app',
@@ -9,4 +9,12 @@ import { SPIELE } from './skatspiel';
 export class AppComponent {
   spiele = SPIELE;
   spieler = ['Margrethe', 'Wencke', 'Timm'];
+
+  ergebnisse: Map<string, number> = new Map();
+
+  constructor() {}
+
+  getErgebnis(spieler: string, spiel: SkatSpiel) {
+    return this.ergebnisse.get(spieler + '_' + spiel.name);
+  }
 }
