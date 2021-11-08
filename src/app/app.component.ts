@@ -10,22 +10,17 @@ export class AppComponent {
   spiele = SPIELE;
   spieler = ['Margrethe', 'Wencke', 'Timm'];
 
-  // ergebnisse: Map<string, string> = new Map();
-
   constructor() {}
 
   getErgebnis(spieler: string, spiel: SkatSpiel) {
     return localStorage.getItem(spieler + '_' + spiel.name);
-    // return this.ergebnisse.get(spieler + '_' + spiel.name);
   }
 
   setErgebnis(spieler: string, spiel: SkatSpiel, punkte: number) {
     if (this.isErgebnis(spieler, spiel, punkte)) {
-      // this.ergebnisse.delete(spieler + '_' + spiel.name);
       localStorage.setItem(spieler + '_' + spiel.name, null);
     } else {
       localStorage.setItem(spieler + '_' + spiel.name, punkte + '');
-      // this.ergebnisse.set(spieler + '_' + spiel.name, punkte + '');
     }
   }
 
