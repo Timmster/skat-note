@@ -12,15 +12,16 @@
           *ngFor="let e of spiel.ergebnisse"
           (click)="setErgebnis(spieler, spiel, e.points)"
         >
-          <div *ngIf="e.points >= 0">
+          <div>
             <mark
               [class]="'selected-' + spieler"
-              *ngIf="isErgebnis(spieler, spiel, e.points)"
+              *ngIf="e.points >= 0 && isErgebnis(spieler, spiel, e.points)"
               >{{ e.points }}</mark
             >
-            <span *ngIf="!isErgebnis(spieler, spiel, e.points)">{{
-              e.points
-            }}</span>
+            <span
+              *ngIf="e.points >= 0 && !isErgebnis(spieler, spiel, e.points)"
+              >{{ e.points }}</span
+            >
           </div>
         </div>
       </div>

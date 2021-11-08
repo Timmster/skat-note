@@ -43,9 +43,9 @@ const GRAND = new SkatSpiel('Grand', [
 
 const NULL = new SkatSpiel('Null', [
   new SkatErgebnis('Verloren', 0),
-  new SkatErgebnis('', -1),
+  new SkatErgebnis('V', -1),
   new SkatErgebnis('Gewonnen', 3),
-  new SkatErgebnis('', -1),
+  new SkatErgebnis('G', -1),
 ]);
 
 const CHANCE = new SkatSpiel('Chance', [
