@@ -14,7 +14,7 @@
         >
           <div
             *ngIf="e.points >= 0"
-            [class]="getErgebnis(spieler, spiel) === e.points ? 'selected' : ''"
+            [class]="isErgebnis(spieler, spiel, e.points) ? 'selected' : ''"
           >
             {{ e.points }}
           </div>
