@@ -1,14 +1,30 @@
 <table>
   <tr>
     <td>Spiel</td>
-    <th colspan="4" *ngFor="let spieler of spieler">{{ s }}</th>
+    <th *ngFor="let spieler of spieler">{{ spieler }}</th>
   </tr>
+  <tr class="empty"></tr>
   <tr *ngFor="let spiel of spiele">
-    <th>{{ s.name }}</th>
+    <th>{{ spiel.name }}</th>
     <td *ngFor="let spieler of spieler">
-      <div *ngFor="let e of spiel.ergebnisse">
-        <span *ngIf="e.points >= 0">{{ e.points }}</span>
+      <div class="punkte">
+        <div
+          *ngFor="let e of spiel.ergebnisse"
+          (click)="setErgebnis(spieler, spiel, e.points)"
+        >
+          <div
+            *ngIf="e.points >= 0"
+            [class]="getErgebnis(spieler, spiel) === e.points ? 'selected' : ''"
+          >
+            {{ e.points }}
+          </div>
+        </div>
       </div>
     </td>
+  </tr>
+  <tr class="empty"></tr>
+  <tr>
+    <td>Gesamt</td>
+    <td *ngFor="let spieler of spieler">{{ getGesamt(spieler) }}</td>
   </tr>
 </table>

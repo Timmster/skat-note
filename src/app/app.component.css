@@ -2,12 +2,13 @@ table {
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   width: 100%;
+  table-layout: fixed;
 }
 
 table td,
 table th {
   border: 2px solid #bbb;
-  padding: 12px;
+  padding: 6px;
   text-align: center;
 }
 
@@ -25,4 +26,30 @@ table th {
   padding-bottom: 12px;
   background-color: #04aa6d;
   color: white;
+}
+
+.empty {
+  height: 1rem;
+}
+
+.punkte {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.punkte div {
+  vertical-align: middle;
+  height: 2rem;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.selected {
+  background-color: lime;
+  cursor: pointer;
+  user-select: none;
+  /*clip-path: 10px 20px 30px 40px);*/
 }
