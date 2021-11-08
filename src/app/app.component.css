@@ -49,8 +49,26 @@ table th {
   cursor: pointer;
 }
 
-.selected {
-  clip-path: polygon(14% 13%, 99% 20%, 88% 89%, 0 84%);
+.selected-Timm {
   background-color: lime;
+}
+
+.selected-Wencke {
+  background-color: rgb(117, 212, 241);
+}
+
+.selected-Margrethe {
+  background-color: #ff69b4;
+}
+
+mark {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+  vertical-align: middle;
+  align-items: center;
+  clip-path: polygon(14% 13%, 99% 20%, 88% 89%, 0 84%);
+  filter: drop-shadow(-1px 6px 3px rgba(50, 50, 0, 0.5));
   user-select: none;
 }
