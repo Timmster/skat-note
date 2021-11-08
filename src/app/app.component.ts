@@ -17,10 +17,12 @@ export class AppComponent {
   }
 
   setErgebnis(spieler: string, spiel: SkatSpiel, punkte: number) {
-    if (this.isErgebnis(spieler, spiel, punkte)) {
-      localStorage.setItem(spieler + '_' + spiel.name, null);
-    } else {
-      localStorage.setItem(spieler + '_' + spiel.name, punkte + '');
+    if (punkte >= 0) {
+      if (this.isErgebnis(spieler, spiel, punkte)) {
+        localStorage.setItem(spieler + '_' + spiel.name, null);
+      } else {
+        localStorage.setItem(spieler + '_' + spiel.name, punkte + '');
+      }
     }
   }
 
