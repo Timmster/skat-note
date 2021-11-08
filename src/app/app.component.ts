@@ -19,8 +19,11 @@ export class AppComponent {
   }
 
   setErgebnis(spieler: string, spiel: SkatSpiel, punkte: number) {
-    this.ergebnisse.delete(spieler + '_' + spiel.name);
-    this.ergebnisse.set(spieler + '_' + spiel.name, punkte);
+    if (this.getErgebnis(spieler, spiel) == punkte) {
+      this.ergebnisse.delete(spieler + '_' + spiel.name);
+    } else {
+      this.ergebnisse.set(spieler + '_' + spiel.name, punkte);
+    }
   }
 
   getGesamt(spieler: string) {
