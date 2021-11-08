@@ -16,15 +16,15 @@ table tr:nth-child(even) {
   background-color: #f2f2f2;
 }
 
-table tr:hover {
-  background-color: #ddd;
+table:hover {
+  background-color: none !important;
 }
 
 table th {
   text-align: center;
   padding-top: 12px;
   padding-bottom: 12px;
-  background-color: #04aa6d;
+  background-color: #444;
   color: white;
 }
 
@@ -41,15 +41,16 @@ table th {
 .punkte div {
   vertical-align: middle;
   height: 2rem;
+  width: 2rem;
   flex-grow: 1;
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 .selected {
+  clip-path: polygon(14% 13%, 99% 20%, 88% 89%, 0 84%);
   background-color: lime;
-  cursor: pointer;
   user-select: none;
-  /*clip-path: 10px 20px 30px 40px);*/
 }
